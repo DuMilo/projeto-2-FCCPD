@@ -39,7 +39,7 @@ docker-compose up --build
 ## Para os Desafios Manuais (1 e 2):
 Estes desafios utilizam comandos `docker run` diretos para fixar conceitos. Consulte o `README.md` dentro de cada pasta para os comandos exatos de criação de rede e montagem de volume.
 
-**Boas práticas e dicas**
+## **Boas práticas e dicas**
 * **Isolamento de Rede**: Nos desafios de microsserviços, utilizei redes internas (`expose`) em vez de mapeamento de portas (`ports`) para os serviços de backend, forçando o acesso apenas pelo Gateway.
 * **Persistência**: Ao testar o Desafio 2, observe que utilizamos a flag `--rm` para remover o container após o uso, provando que o arquivo `.db` persiste no host local independente do container.
 * **Variáveis de Ambiente**: Credenciais e configurações sensíveis foram desacopladas do código (12-Factor App) e injetadas via `docker-compose.yml`.
